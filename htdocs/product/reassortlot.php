@@ -386,7 +386,10 @@ if ($resql)
 		print '<td align="center">';
 		if ($product_lot_static->batch)
 		{
-			print $product_lot_static->getNomUrl(1);
+//AMG-INITIAL
+//AMG			print $product_lot_static->getNomUrl(1);
+			print '<td align="center"><a href="'.DOL_URL_ROOT.'/product/stock/productlot_card.php?id='.$objp->plfid.'">'.$objp->batch.'</a></td>';
+//AMG-END
 		}
 		print '</td>';
 
